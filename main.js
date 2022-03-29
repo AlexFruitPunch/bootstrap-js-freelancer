@@ -7,7 +7,6 @@ const Backend = 20.5;
 const Frontend = 15.3;
 const ProjectAnalisis = 33.6;
 
-
 //Recupero dei dati dal form
 function submitForm(event){
     event.preventDefault();
@@ -60,12 +59,13 @@ function submitForm(event){
             let discount = 0;
             discount = totale * 0.25;
             totale = totale - discount;
-        } else{
-            console.log("Codice sconto non valido");
+            console.log("Codice sconto valido");
+            delete CodeSconto[i];
+            document.getElementById("codice-sconto").style.color = "#ff0000";
         }
     }
 
-    document.getElementById("risultato").innerHTML = "Preventivo lavoro: € " + totale;
+    document.getElementById("risultato").innerHTML = "Preventivo lavoro: € " + totale.toFixed(2);
 }
 
 //Fine recupero dei dati dal form
