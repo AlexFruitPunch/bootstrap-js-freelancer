@@ -133,35 +133,35 @@
 
                     <!--Riga del Form-->
                     <div class="col">
-                        <form class="form row">
+                        <form class="form row" id="myForm" onsubmit="submitForm(event)">
                             <!--Nome-->
                             <div class="form-group col-md-6 my-2">
-                                <label for="imput-name">First name</label>
-                                <input type="text" class="form-control" id="imput-name" placeholder="First name">
+                                <label for="input-name">First name</label>
+                                <input type="text" class="form-control" id="input-name" placeholder="First name">
                             </div>
 
                             <!--Cognome-->
                             <div class="form-group col-md-6 my-2">
-                                <label for="imput-last-name">Last name</label>
-                                <input type="text" class="form-control" id="imput-last-name" placeholder="Last name">
+                                <label for="input-last-name">Last name</label>
+                                <input type="text" class="form-control" id="input-last-name" placeholder="Last name">
                             </div>
 
                             <!--Email-->
                             <div class="form-group col-md-6 my-2">
-                                <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                <label for="input-Email">Email</label>
+                                <input type="email" class="form-control" id="input-Email" placeholder="Email">
                             </div>
 
                             <!--Ore Richieste-->
                             <div class="form-group col-md-6 my-2">
                                 <label for="input-hours">Hours requested</label>
-                                <input type="text" class="form-control" id="imput-hours" placeholder="Hour requested">
+                                <input type="text" class="form-control" id="input-hours" placeholder="Hour requested">
                             </div>
 
                             <!--Tipo di lavoro-->
                             <div class="form-group col-md-6 my-2">
                             <label for="selezione-tipo-lavoro">Type of work</label>
-                                <select class="form-control">
+                                <select class="form-control" id="selezione-tipo-lavoro">
                                     <option>Back-end Development</option>
                                     <option>Front-end Development</option>
                                     <option>Project Analisys</option>
@@ -170,18 +170,18 @@
 
                             <!--Codice Sconto-->
                             <div class="form-group col-md-6 my-2">
-                                <label for="inputPassword4">Discount Code</label>
-                                <input type="text" class="form-control" placeholder="Discount Code">
+                                <label for="codice-sconto">Discount Code</label>
+                                <input type="text" class="form-control" id="codice-sconto" placeholder="Discount Code">
                             </div>
 
                             <!--Messaggio-->
                             <div class="form-group my-2">
-                                <label for="exampleFormControlTextarea1">Message</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <label for="messaggio">Message</label>
+                                <textarea class="form-control" id="messaggio" rows="3"></textarea>
                             </div>
 
                             <!--Pulsante Send-->
-                            <div class="form-group col-md-2">
+                            <div class="form-group col-md-12 text-center">
                                 <button type="submit" class="btn btn-warning my-3">Send</button>
                             </div>
                           </form>
@@ -195,8 +195,8 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h3 class="text-muted py-3">location</h2>
-                    <p class="text-muted">2215 John Daniel Drive</p>
+                    <h3 class="text-muted py-4">location</h2>
+                    <p class="text-muted mb-0">2215 John Daniel Drive</p>
                     <p class="text-muted">Clark,MO 65243</p>
                     <p class="text-muted pb-4">Copyright &#169; Your Website 2021</p>
                 </div>
