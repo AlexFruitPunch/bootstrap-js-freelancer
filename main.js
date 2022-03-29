@@ -9,6 +9,7 @@ const ProjectAnalisis = 33.6;
 
 //dichiarazione variabile Flag per controllo codice sconto
 let trovato = false;
+document.getElementById("codice-sconto").style.color = "#000000";
 
 //Recupero dei dati dal form
 function submitForm(event){
