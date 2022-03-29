@@ -7,6 +7,9 @@ const Backend = 20.5;
 const Frontend = 15.3;
 const ProjectAnalisis = 33.6;
 
+//dichiarazione variabile Flag per controllo codice sconto
+let trovato = false;
+
 //Recupero dei dati dal form
 function submitForm(event){
     event.preventDefault();
@@ -61,8 +64,14 @@ function submitForm(event){
             totale = totale - discount;
             console.log("Codice sconto valido");
             delete CodeSconto[i];
-            document.getElementById("codice-sconto").style.color = "#ff0000";
+            trovato = true;
         }
+    }
+
+    if(trovato == false){
+        document.getElementById("codice-sconto").style.color = "#ff0000";
+        alert(InputName + " " + InputLastName + " il tuo Codice Sconto non è valido");
+        alert("Preventivo eseguito senza applicazione di sconti");
     }
 
     document.getElementById("risultato").innerHTML = "Preventivo lavoro: € " + totale.toFixed(2);
