@@ -79,7 +79,7 @@
                 </div>       
             </div>   
             <!--Seconda riga 3 immagini-->
-            <div class="row mt-5">
+            <div class="row my-5">
                 <!--1° card Game Web site -->
                 <div class="col">
                     <div class="card text-center shadow bg-body">
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                 </div> 
-                <!--2° card Torta -->
+                <!--2° card Safe Website-->
                 <div class="col">
                     <div class="card text-center shadow bg-body">
                         <img src="img/portfolio/safe.png" class="card-img-top" alt="Immagine Safe Website">
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                <!--3° card Circo -->
+                <!--3° card Submarine Website-->
                 <div class="col">
                     <div class="card text-center shadow bg-body">
                         <img src="img/portfolio/submarine.png" class="card-img-top" alt="immagine Submarine Website">
@@ -118,20 +118,83 @@
         <!--Fine contenitore Portfolio con immagini e bottoni-->
 
         <!--Inizio contenitore form-->
-        <div class="container">
-            <!--Riga Want an Offer?-->
-            <div class="row">
-                <div class="col">
-                    <h5 class="text-uppercase text-center py-3">want an offer?</h1>
-                </div>
-            </div>
-            <div class="row">
+        <div class="bg-info">
+            <div class="container">
+                <!--Riga Want an Offer?-->
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="text-uppercase text-center py-3">want an offer?</h1>
+                    </div>
 
+                    <!--Riga del Form-->
+                    <div class="col">
+                        <form class="form row">
+                            <!--Nome-->
+                            <div class="form-group col-md-6 my-2">
+                                <label for="imput-name">First name</label>
+                                <input type="text" class="form-control" id="imput-name" placeholder="First name">
+                            </div>
+
+                            <!--Cognome-->
+                            <div class="form-group col-md-6 my-2">
+                                <label for="imput-last-name">Last name</label>
+                                <input type="text" class="form-control" id="imput-last-name" placeholder="Last name">
+                            </div>
+
+                            <!--Email-->
+                            <div class="form-group col-md-6 my-2">
+                                <label for="inputEmail">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            </div>
+
+                            <!--Ore Richieste-->
+                            <div class="form-group col-md-6 my-2">
+                                <label for="input-hours">Hours requested</label>
+                                <input type="text" class="form-control" id="imput-hours" placeholder="Hour requested">
+                            </div>
+
+                            <!--Tipo di lavoro-->
+                            <div class="form-group col-md-6 my-2">
+                            <label for="selezione-tipo-lavoro">Type of work</label>
+                                <select class="form-control">
+                                    <option>Back-end Development</option>
+                                    <option>Front-end Development</option>
+                                    <option>Project Analisys</option>
+                                </select>
+                            </div>
+
+                            <!--Codice Sconto-->
+                            <div class="form-group col-md-6 my-2">
+                                <label for="inputPassword4">Discount Code</label>
+                                <input type="text" class="form-control" placeholder="Discount Code">
+                            </div>
+
+                            <!--Messaggio-->
+                            <div class="form-group my-2">
+                                <label for="exampleFormControlTextarea1">Message</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+
+                            <!--Pulsante Send-->
+                            <div class="form-group col-md-2">
+                                <button type="submit" class="btn btn-warning my-3">Send</button>
+                            </div>
+                          </form>
+                    </div>
+                    <!--Fine Riga Form-->
                 </div>
             </div>
         </div>
     </main>
-
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
     <!--Mio Javascript-->
     <script type="text/javascript" src="main.js"></script>
     <!--Bootstrap Bundle with Popper -->
