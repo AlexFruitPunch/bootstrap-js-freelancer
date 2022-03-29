@@ -2,7 +2,7 @@
 let CodeSconto = ["YHDNU32","JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
 //valorizzazione delle ore di lavoro
-let OreLavorative = 0;
+
 const Backend = 20.5;
 const Frontend = 15.3;
 const ProjectAnalisis = 33.6;
@@ -11,29 +11,61 @@ const ProjectAnalisis = 33.6;
 //Recupero dei dati dal form
 function submitForm(event){
     event.preventDefault();
+
+    //Preventivo finale
+    let totale;
+
     //Nome
-    let InputName = document.getElementById("input-name").Value;
+    let InputName = document.getElementById("input-name").value;
     console.log("Nome Richiedente: " + InputName);
 
     //Cognome
-    let InputLastName = document.getElementById("input-last-name").Value;
+    let InputLastName = document.getElementById("input-last-name").value;
     console.log("Cognognome Richiedente: " + InputLastName);
 
     //email
-    let email = document.getElementById("input-email").Value;
+    let email = document.getElementById("input-email").value;
     console.log("Email Richiedente: " + email);
 
     //Ore Lavorative
-    let inputHours = document.getElementById("input-hours").Value;
+    let inputHours = document.getElementById("input-hours").value;
     console.log("Ore Richiedente: " + inputHours);
+    inputHours = parseInt(inputHours);
 
     //Tipo di Lavoro richiesto
-    let TypeOfWork = document.getElementById("selezione-tipo-lavoro").Value;
+    let TypeOfWork = document.getElementById("selezione-tipo-lavoro").value;
     console.log("Tipo di lavoro Richiedente: " + TypeOfWork);
 
+    //Controllo sulle scelte sul form
+    switch (TypeOfWork) {
+        case "Back-end Development": 
+            totale = Backend * inputHours;
+            break;
+        case "Front-end Development":  
+            totale = Frontend * inputHours;  
+            break;
+        case "Project Analisys":  
+            totale = ProjectAnalisis * inputHours;  
+            break;
+        default:
+            break;
+    }
     //Codice Sconto
-    let CodiceUtente = document.getElementById("codice-sconto").Value;
-    console.log("Nome Richiedente: " + CodiceUtente);
+    let CodiceUtente = document.getElementById("codice-sconto").value;
+    console.log("Sconto Richiedente: " + CodiceUtente);
 
-    //Fine recupero dei dati dal form
+    //Controllo se ha inserito un codice sconto
+    for (let i = 0; i < CodeSconto.length; i++) {
+        if(CodeSconto[i] == CodiceUtente){
+            let discount = 0;
+            discount = totale * 0.25;
+            totale = totale - discount;
+        } else{
+            console.log("Codice sconto non valido");
+        }
+    }
+
+    document.getElementById("risultato").innerHTML = "Preventivo lavoro: € " + totale;
 }
+
+//Fine recupero dei dati dal form
